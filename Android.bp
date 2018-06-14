@@ -92,9 +92,6 @@ cc_library_static {
         "vold_default_libs",
     ],
 
-    header_libs: ["libcryptfs_hw_headers"],
-    cflags: ["-DCONFIG_HW_DISK_ENCRYPTION"],
-    shared_libs: ["libcryptfs_hw"],
     srcs: [
         "Benchmark.cpp",
         "CheckEncryption.cpp",
@@ -153,7 +150,6 @@ cc_binary {
 
     srcs: ["main.cpp"],
     static_libs: ["libvold"],
-    shared_libs: ["libcryptfs_hw"],
     product_variables: {
         arc: {
             static_libs: [
